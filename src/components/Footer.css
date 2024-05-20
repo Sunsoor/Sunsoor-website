@@ -17,6 +17,7 @@
 .footer-item {
     margin: 1em 3em;
     width: 25%;
+    box-sizing: border-box;
 }
 
 .logo-container {
@@ -64,4 +65,44 @@ a {
     margin: 0 6em;
     font-size: 0.8em;
     color: #333;
+}
+
+
+/* Media Queries */
+
+
+/* For tablets and below */
+
+@media (max-width: 768px) {
+    .footer-section {
+        margin: 0 1.5em;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .footer-item {
+        width: 45%;
+        /* Adjust width for two items per row */
+        margin: 1em 1.5em;
+    }
+    .footer-bottom {
+        margin: 0 3em;
+    }
+}
+
+
+/* For mobile devices */
+
+@media (max-width: 480px) {
+    .footer-section {
+        flex-direction: column;
+        margin: 0 1em;
+    }
+    .footer-item {
+        width: 100%;
+        /* Full width for each item */
+        margin: 1em 0;
+    }
+    .footer-bottom {
+        margin: 0 1em;
+    }
 }
