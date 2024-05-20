@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+.root {
+    font-family: 'Inter';
+}
+
+
+/* Common Styles */
+
+.navbar {
+    width: 100%;
+    overflow-x: hidden;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.Nav_container {
+    margin: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.logo {
+    background-color: #268AFF;
+    margin: 0 10px;
+    border-radius: 12px;
+}
+
+.logo_heading {
+    font-weight: bold;
+    color: #000000;
+    margin: 10px;
+}
+
+.nav_items {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #000000;
+}
+
+.nav_last {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.download-app {
+    background-color: #268AFF;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+}
+
+.manu {
+    margin: 0 10px;
+}
+
+
+/* Large Screens */
+
+@media only screen and (min-width: 800px) {
+    .navbar {
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+    }
+    .logo {
+        height: 50px;
+        width: 50px;
+    }
+    .logo_heading {
+        font-size: 59px;
+    }
+    .nav_items {
+        font-size: 24px;
+    }
+    .download-app {
+        font-size: 24px;
+    }
+}
+
+
+/* Medium Screens */
+
+@media only screen and (min-width: 600px) and (max-width: 800px) {
+    .logo {
+        height: 40px;
+        width: 40px;
+    }
+    .logo_heading {
+        font-size: 30px;
+    }
+}
+
+
+/* Small Screens */
+
+@media only screen and (max-width: 600px) {
+    .logo {
+        height: 30px;
+        width: 30px;
+        margin: 0 5px;
+        border-radius: 10px;
+    }
+    .logo_heading {
+        font-size: 20px;
+        margin: 5px;
+    }
+    .download-app {
+        font-size: 15px;
+        padding: 5px 10px;
+        border-radius: 15px;
+    }
+}
