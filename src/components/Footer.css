@@ -20,13 +20,13 @@
     box-sizing: border-box;
 }
 
-.logo-container {
+.footer-logo-container {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
 }
 
-.logo {
+.footer-logo {
     background-color: #268AFF;
     height: 40px;
     width: 40px;
@@ -34,24 +34,24 @@
     border-radius: 8px;
 }
 
-h2 {
+.footer-heading {
     font-size: 2.5em;
     font-weight: bold;
 }
 
-h3 {
+.footer-subHeading {
     font-size: 2em;
     margin: 1.3em 0;
     font-weight: bold;
 }
 
-p {
+.footer-para {
     font-size: 1.2em;
     color: #333;
     margin: 0.75em 0;
 }
 
-a {
+.footer-links {
     display: block;
     font-size: 1.2em;
     color: #000000;
@@ -63,7 +63,6 @@ a {
     border-top: 2px solid #268AFF;
     padding-top: 10px;
     margin: 0 6em;
-    font-size: 0.8em;
     color: #333;
 }
 
@@ -81,10 +80,21 @@ a {
     .footer-item {
         width: 45%;
         /* Adjust width for two items per row */
-        margin: 1em 1.5em;
+        margin: 0 1.5em;
+    }
+    .footer-heading {
+        font-size: 1.7em;
+    }
+    .footer-subHeading {
+        font-size: 1.5em;
+    }
+    .footer-para,
+    .footer-links {
+        font-size: 1em;
     }
     .footer-bottom {
         margin: 0 3em;
+        font-size: .8em;
     }
 }
 
@@ -99,9 +109,21 @@ a {
     .footer-item {
         width: 100%;
         /* Full width for each item */
-        margin: 1em 0;
+        margin: 0;
+    }
+    .footer-heading {
+        font-size: 1.5em;
+    }
+    .footer-subHeading {
+        font-size: 1.3em;
+        margin: 0;
+    }
+    .footer-para,
+    .footer-links {
+        font-size: .8em;
     }
     .footer-bottom {
         margin: 0 1em;
+        font-size: .6em;
     }
 }

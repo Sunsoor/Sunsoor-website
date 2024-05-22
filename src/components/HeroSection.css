@@ -6,72 +6,152 @@
 .hero-section {
     display: flex;
     justify-content: center;
+    /*height: 70vh;*/
+    overflow: hidden;
     margin-top: 15vh;
     gap: 10%;
     overflow-x: hidden;
 }
 
-.content {
+.hero-content {
     width: 40%;
 }
 
-.hero-section h1 {
+.hero-heading {
     font-size: 3.5em;
     color: #3A3A3A;
 }
 
-.hero-section h1 span {
+.hero-highlight {
     color: #007bff;
 }
 
-.buttons {
+.hero-buttons {
     margin-right: 1em;
 }
 
-.hero-section .buttons a {
+.hero-login,
+.hero-signup {
     display: inline-block;
     padding: 12px 60px;
     border-radius: 25px;
     text-decoration: none;
     font-size: 1.5rem;
+    margin-right: 20px;
 }
 
-.hero-section .buttons .login {
+.hero-login {
     background-color: #ffffff;
     color: #007bff;
     border: 2px solid #007bff;
-    margin-right: 20px;
 }
 
-.hero-section .buttons .signup {
+.hero-signup {
     background-color: #007bff;
     color: #ffffff;
     border: 2px solid #ffffff;
-    margin-right: 20px;
 }
 
-.hero-section .qr-code {
+.hero-qr-code {
     margin-top: 20px;
     display: flex;
 }
 
-.qr {
+.hero-qr {
     width: 10rem;
     height: 10rem;
 }
 
-.hero-section .qr-code div p {
+.hero-scan-to-download {
     padding: 10px;
     border-radius: 25px;
     box-shadow: 0 2px 4px rgba(42, 42, 42, 0.4);
     color: #555;
+    background-color: #ffffff;
 }
 
-.arrow {
+.hero-arrow {
     width: 45%;
     height: 40%;
 }
 
-.qr_Scan {
+.hero-qr-Scan {
     margin-top: 45px;
+}
+
+@media (min-width: 1230px) {
+    .hero-section {
+        height: 80vh;
+    }
+}
+
+@media only screen and (min-width: 865px) and (max-width: 1230px) {
+    .hero-section {
+        height: 100vh;
+    }
+}
+
+
+/* Styles for small screens */
+
+@media (max-width: 865px) {
+    .hero-section {
+        align-items: center;
+        flex-direction: column;
+        height: auto;
+        margin-top: 5vh;
+        gap: 2rem;
+        overflow-x: visible;
+        justify-content: flex-start;
+        height: 125vh;
+    }
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        width: 70%;
+        order: 1;
+    }
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    .phone-image-container {
+        order: 2;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .phone-image {
+        max-width: 80%;
+        height: auto;
+    }
+    .hero-buttons {
+        margin-right: 0;
+        display: flex;
+        justify-content: center;
+    }
+    .hero-login,
+    .hero-signup {
+        padding: 8px 30px;
+        font-size: 1rem;
+        margin-right: 10px;
+    }
+    .hero-qr-code {
+        margin-top: 2rem;
+        justify-content: center;
+    }
+    .hero-qr {
+        width: 8rem;
+        height: 8rem;
+    }
+    .hero-scan-to-download {
+        font-size: 0.8rem;
+    }
+    .hero-arrow {
+        width: 30%;
+        height: 30%;
+    }
+    .hero-qr-Scan {
+        margin-top: 1rem;
+    }
 }

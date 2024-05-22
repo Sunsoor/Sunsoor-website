@@ -6,46 +6,46 @@
 
 /* Common Styles */
 
-.navbar {
+.navBar {
     width: 100%;
-    overflow-x: hidden;
+    background-color: #ffffff;
     padding: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.Nav_container {
+.navBar-container {
     margin: 0 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.logo_container {
+.navBar-logo-container {
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
 }
 
-.logo {
+.navBar-logo {
     background-color: #268AFF;
     margin: 0 10px;
     border-radius: 12px;
 }
 
-.logo_heading {
+.logo-heading {
     font-weight: bold;
     color: #000000;
     margin: 10px;
 }
 
-.nav_items {
+.nav-items {
     margin: 0 10px;
     text-decoration: none;
     color: #000000;
 }
 
-.nav_last {
+.navBar-ManuSection {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -59,62 +59,110 @@
     text-decoration: none;
 }
 
-.manu {
-    margin: 0 10px;
+.navBar-manu {
+    margin: 0;
+    height: 0;
+    width: 0;
+}
+
+.download-container {
+    position: relative;
+    display: none;
+}
+
+.download-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.download-button img {
+    width: 30px;
+    height: 30px;
+}
+
+.dropdown {
+    position: absolute;
+    margin: 0px -100px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown ul {
+    list-style-type: none;
+    margin: 10px;
+    padding: 0;
+}
+
+.dropdown ul li {
+    border-radius: 5px;
+}
+
+.dropdown ul li a {
+    text-decoration: none;
+    padding: 7px 10px;
+    color: #ffffff;
+}
+
+.dropdown ul li:hover {
+    background-color: #f1f1f1;
 }
 
 
 /* Large Screens */
 
-@media only screen and (min-width: 800px) {
-    .navbar {
+@media only screen and (min-width: 865px) {
+    .navBar {
         box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
     }
-    .logo {
+    .navBar-logo {
         height: 50px;
         width: 50px;
     }
-    .logo_heading {
+    .logo-heading {
         font-size: 59px;
     }
-    .nav_items {
+    .nav-items {
         font-size: 24px;
     }
     .download-app {
         font-size: 24px;
-    }
-}
-
-
-/* Medium Screens */
-
-@media only screen and (min-width: 600px) and (max-width: 800px) {
-    .logo {
-        height: 40px;
-        width: 40px;
-    }
-    .logo_heading {
-        font-size: 30px;
     }
 }
 
 
 /* Small Screens */
 
-@media only screen and (max-width: 600px) {
-    .logo {
+@media only screen and (max-width: 865px) {
+    .navBar-logo {
         height: 30px;
         width: 30px;
         margin: 0 5px;
         border-radius: 10px;
     }
-    .logo_heading {
-        font-size: 20px;
+    .logo-heading {
+        font-size: 1.7em;
         margin: 5px;
     }
     .download-app {
+        display: none;
+    }
+    .navBar-manu {
+        margin: 10em;
+        height: 30px;
+        width: 30px;
+    }
+    .download-container {
+        display: block;
+        width: 25px;
+    }
+    .download-app-manu {
+        display: block;
         font-size: 15px;
-        padding: 5px 10px;
         border-radius: 15px;
+        background-color: #268AFF;
+        text-decoration: none;
     }
 }

@@ -1,0 +1,109 @@
+    /* SectionOne.css */
+    
+    .root {
+        font-family: 'Inter';
+    }
+    
+    .section-main {
+        width: 100vw;
+    }
+    
+    .section-content01 {
+        background-color: #ffffff;
+    }
+    
+    .section-content02 {
+        background-color: #f4f4f4;
+    }
+    
+    .section-content01,
+    .section-content02 {
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .section-image-container {
+        margin: 10vh 8vw;
+        border-radius: 10px;
+    }
+    
+    .section-text-container01 {
+        margin: 5em 5em 5em 0;
+    }
+    
+    .section-text-container02 {
+        margin: 5em 0 5em 5em;
+        text-align: end;
+    }
+    
+    .section-heading {
+        font-size: 3.5em;
+        padding: 10px;
+        color: #333;
+    }
+    
+    .section-highlight {
+        color: #007bff;
+    }
+    
+    .section-para {
+        font-size: 1.5em;
+        color: #555;
+        line-height: 1.6;
+        margin-top: 20px;
+    }
+    /* Media Queries */
+    
+    @media only screen and (min-width: 700px) and (max-width: 1136px) {
+        .section-content01,
+        .section-content02 {
+            flex-direction: column;
+            align-items: center;
+        }
+        .section-text-container01 {
+            margin: 0em 5em 0em 2em;
+            align-items: start;
+        }
+        .section-text-container02 {
+            margin: 0em 2em 0em 5em;
+            text-align: end;
+        }
+        .section-heading {
+            font-size: 2.5em;
+        }
+        .section-para {
+            font-size: 1.2em;
+        }
+    }
+    /* small screen */
+    
+    @media (max-width: 699px) {
+        .section-content01,
+        .section-content02 {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .section-image-container {
+            margin: 2rem 0;
+            order: 2;
+        }
+        .section-image {
+            width: 100%;
+        }
+        .section-text-container01,
+        .section-text-container02 {
+            margin: 2rem 4rem;
+            order: 1;
+            text-align: center;
+        }
+        .section-heading {
+            font-size: 2rem;
+        }
+        .section-para {
+            font-size: 1rem;
+        }
+    }

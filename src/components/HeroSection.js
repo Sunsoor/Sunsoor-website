@@ -11,17 +11,17 @@ const HeroSection = () => {
             <div className="phone-image-container">
                 <img src={phoneImage} alt="Phone" className="phone-image" />
             </div>
-            <div className='content'>
-                <h1><span>Sunsoor</span> Job Portal & E-Learning Platform</h1>
-                <div className="buttons">
-                    <a href="/login" className="login">Login</a>
-                    <a href="/signup" className="signup">Sign up</a>
+            <div className='hero-content'>
+                <h1 className='hero-heading' ><span className='hero-highlight'>Sunsoor</span> Job Portal & E-Learning Platform</h1>
+                <div className="hero-buttons">
+                    <a href="/login" className="hero-login">Login</a>
+                    <a href="/signup" className="hero-signup">Sign up</a>
                 </div>
-                <div className="qr-code">
-                    <img src={qrCodeImage} alt="QR Code" className='qr' />
-                    <div className='qr_Scan'>
-                    <img src={arrow} alt="" className='arrow'/>
-                    <p>Scan to download</p>
+                <div className="hero-qr-code">
+                    <img src={qrCodeImage} alt="QR Code" className='hero-qr' />
+                    <div className='hero-qr-Scan'>
+                    <img src={arrow} alt="" className='hero-arrow'/>
+                    <p className='hero-scan-to-download'>Scan to download</p>
                     </div>
                 </div>
             </div>
