@@ -1,7 +1,7 @@
-
 import React, { useState } from 'react';
 import './NavBar.css';
 import manu from "../assets/Menu.svg"
+import { CustomButton, Logo } from './subcomponents/Elements';
 
 const Navbar = () => {
     const [isDropdownVisible, setDropdownVisible] = useState(false);
@@ -11,21 +11,24 @@ const Navbar = () => {
     return (
         <header className="navBar">
             <div className='navBar-container'>
-                <div className='navBar-logo-container'>
-                    <div className='navBar-logo'></div>
-                    <div className="logo-heading">Sunsoor</div>
-                </div>
-                {/*<a href="/" className='nav_items'>Home</a>*/}
+                <Logo path = "/" />
                 <div className='navBar-ManuSection'>
-                    <a href="/" className="download-app">Download App</a>
+                    <div className='downloadbutton'>
+                        <CustomButton
+                            content="Download now"
+                            path="/download-now" />
+                    </div>
+
                     <div className="download-container">
-                        <button className="download-button" onClick={toggleDropdown}>
-                            <img src={manu} alt="Download" />
+                        <button className="manu-button" onClick={toggleDropdown}>
+                            <img src={manu} alt="Download" className='manu-img' />
                         </button>
                         {isDropdownVisible && (
                             <div className="dropdown">
                                 <ul>
-                                    <li><a href="/" className="download-app-manu">Download App</a></li>
+                                    <li><CustomButton
+                                        content="Download now"
+                                        path="/download-now" /></li>
                                 </ul>
                             </div>
                         )}

@@ -6,7 +6,7 @@
 .hero-section {
     display: flex;
     justify-content: center;
-    /*height: 70vh;*/
+    height: 80vh;
     overflow: hidden;
     margin-top: 15vh;
     gap: 10%;
@@ -17,39 +17,9 @@
     width: 40%;
 }
 
-.hero-heading {
-    font-size: 3.5em;
-    color: #3A3A3A;
-}
-
-.hero-highlight {
-    color: #007bff;
-}
-
 .hero-buttons {
     margin-right: 1em;
-}
-
-.hero-login,
-.hero-signup {
-    display: inline-block;
-    padding: 12px 60px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-size: 1.5rem;
-    margin-right: 20px;
-}
-
-.hero-login {
-    background-color: #ffffff;
-    color: #007bff;
-    border: 2px solid #007bff;
-}
-
-.hero-signup {
-    background-color: #007bff;
-    color: #ffffff;
-    border: 2px solid #ffffff;
+    display: flex;
 }
 
 .hero-qr-code {
@@ -79,22 +49,20 @@
     margin-top: 45px;
 }
 
-@media (min-width: 1230px) {
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
     .hero-section {
-        height: 80vh;
+        height: 75vh;
+        gap: 5%;
     }
-}
-
-@media only screen and (min-width: 865px) and (max-width: 1230px) {
-    .hero-section {
-        height: 100vh;
+    .hero-scan-to-download {
+        font-size: 0.7rem;
     }
 }
 
 
 /* Styles for small screens */
 
-@media (max-width: 865px) {
+@media (max-width: 767px) {
     .hero-section {
         align-items: center;
         flex-direction: column;
@@ -108,12 +76,13 @@
     .hero-content {
         display: flex;
         flex-direction: column;
-        align-items: start;
+        align-items: center;
         width: 70%;
         order: 1;
     }
     .hero-section h1 {
         font-size: 2rem;
+        text-align: center;
     }
     .phone-image-container {
         order: 2;
@@ -130,12 +99,6 @@
         display: flex;
         justify-content: center;
     }
-    .hero-login,
-    .hero-signup {
-        padding: 8px 30px;
-        font-size: 1rem;
-        margin-right: 10px;
-    }
     .hero-qr-code {
         margin-top: 2rem;
         justify-content: center;
@@ -145,7 +108,7 @@
         height: 8rem;
     }
     .hero-scan-to-download {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
     }
     .hero-arrow {
         width: 30%;

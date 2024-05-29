@@ -20,43 +20,10 @@
     align-items: center;
 }
 
-.navBar-logo-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
-
-.navBar-logo {
-    background-color: #268AFF;
-    margin: 0 10px;
-    border-radius: 12px;
-}
-
-.logo-heading {
-    font-weight: bold;
-    color: #000000;
-    margin: 10px;
-}
-
-.nav-items {
-    margin: 0 10px;
-    text-decoration: none;
-    color: #000000;
-}
-
 .navBar-ManuSection {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.download-app {
-    background-color: #268AFF;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 25px;
-    text-decoration: none;
 }
 
 .navBar-manu {
@@ -70,20 +37,20 @@
     display: none;
 }
 
-.download-button {
+.manu-button {
     background-color: transparent;
     border: none;
     cursor: pointer;
 }
 
-.download-button img {
+.manu-img {
     width: 30px;
     height: 30px;
 }
 
 .dropdown {
     position: absolute;
-    margin: 0px -100px;
+    margin: 0px -130px;
     border-radius: 10px;
     background-color: #ffffff;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -100,69 +67,20 @@
     border-radius: 5px;
 }
 
-.dropdown ul li a {
-    text-decoration: none;
-    padding: 7px 10px;
-    color: #ffffff;
-}
-
-.dropdown ul li:hover {
-    background-color: #f1f1f1;
-}
-
 
 /* Large Screens */
 
-@media only screen and (min-width: 865px) {
-    .navBar {
-        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
-    }
-    .navBar-logo {
-        height: 50px;
-        width: 50px;
-    }
-    .logo-heading {
-        font-size: 59px;
-    }
-    .nav-items {
-        font-size: 24px;
-    }
-    .download-app {
-        font-size: 24px;
-    }
-}
+@media only screen and (min-width: 768px) and (max-width: 1199px) {}
 
 
 /* Small Screens */
 
-@media only screen and (max-width: 865px) {
-    .navBar-logo {
-        height: 30px;
-        width: 30px;
-        margin: 0 5px;
-        border-radius: 10px;
-    }
-    .logo-heading {
-        font-size: 1.7em;
-        margin: 5px;
-    }
-    .download-app {
+@media only screen and (max-width: 767px) {
+    .downloadbutton {
         display: none;
-    }
-    .navBar-manu {
-        margin: 10em;
-        height: 30px;
-        width: 30px;
     }
     .download-container {
         display: block;
         width: 25px;
-    }
-    .download-app-manu {
-        display: block;
-        font-size: 15px;
-        border-radius: 15px;
-        background-color: #268AFF;
-        text-decoration: none;
     }
 }
