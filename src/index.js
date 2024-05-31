@@ -4,11 +4,14 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from "react-router-dom"
+import "./i18n/i18n";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
-    <App />
+    <React.Suspense fallback="loading...">
+      <App />
+    </React.Suspense>
   </BrowserRouter>
 );
 

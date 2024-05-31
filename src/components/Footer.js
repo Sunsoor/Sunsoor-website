@@ -1,8 +1,10 @@
 import React from 'react';
 import './Footer.css';
 import { CustomLinks, Logo, ParaContain, SubHeading } from './subcomponents/Elements';
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
+    const {t} = useTranslation();
     return (
         <footer className="footer">
             <div className="footer-section">
@@ -10,21 +12,21 @@ const Footer = () => {
                     
                     <Logo/>
                     <ParaContain
-                    content = "Lorem ipsum dolor sit amet consectetur. Felis lectus a viverra in sit Nunc diam in id gravida purus iaculis" />
+                    content ={t("companyInfo.description")} />
                 </div>
                 <div className="footer-item">
                     
-                    <SubHeading heading = "Support"/>
+                    <SubHeading heading = {t("Support.title")}/>
                     <CustomLinks path ="mailto:support@sunsor.in" content = "Support@sunsor.in" />
-                    <CustomLinks path ="tel:+7124567830" content = "Customer support" />
+                    <CustomLinks path ="tel:+7124567830" content = {t("Support.customersupport")} />
                     <CustomLinks path ="tel:+7124567830" content = "7124567830" />
                 </div>
                 <div className="footer-item">
                     
-                    <SubHeading heading = "Legal"/>
-                    <CustomLinks path ="/privacy-policy" content = "Privacy Policy" />
-                    <CustomLinks path ="/terms-and-conditions" content = "Terms & Conditions" />
-                    <CustomLinks path ="/refund-policy" content = "Refund Policy" />
+                    <SubHeading heading = {t("legal.title")} />
+                    <CustomLinks path ="/privacy-policy" content = {t("legal.privacyPolicy")} />
+                    <CustomLinks path ="/terms-and-conditions" content = {t("legal.termsAndConditions")} />
+                    <CustomLinks path ="/refund-policy" content = {t("legal.refundPolicy")} />
                     
                 </div>
             </div>

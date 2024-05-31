@@ -5,8 +5,11 @@ import phoneImage from '../assets/phone.png';
 import qrCodeImage from '../assets/QR.png';
 import arrow from '../assets/Vector 10.png'
 import { CustomButton, MainHeading } from './subcomponents/Elements';
+import { useTranslation } from 'react-i18next';
 
 const HeroSection = () => {
+    const { t } = useTranslation();
+
     return (
         <main className="hero-section">
             <div className="phone-image-container">
@@ -14,17 +17,18 @@ const HeroSection = () => {
             </div>
             <div className='hero-content'>
                 <MainHeading
-                    highlight="Sunsoor"
-                    posthighlight="Job Portal & E-Learning Platform"
+                    highlight={t("platformInfo.heading.highlight")}
+                    posthighlight={t("platformInfo.heading.posthighlight")}
                 />
                 <div className="hero-buttons">
-                    <CustomButton content="Login"
+                    <CustomButton
+                        content={t("platformInfo.buttons.login")}
                         path="/"
                         backgroundColor="#ffffff"
                         textColor="#268AFF"
                     />
                     <CustomButton
-                        content="Sign up"
+                        content={t("platformInfo.buttons.signup")}
                         path="/"
 
                     />
@@ -33,7 +37,7 @@ const HeroSection = () => {
                     <img src={qrCodeImage} alt="QR Code" className='hero-qr' />
                     <div className='hero-qr-Scan'>
                         <img src={arrow} alt="" className='hero-arrow' />
-                        <p className='hero-scan-to-download'>Scan to download</p>
+                        <p className='hero-scan-to-download'>{t("platformInfo.qrCode")}</p>
                     </div>
                 </div>
             </div>

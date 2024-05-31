@@ -1,0 +1,59 @@
+{
+    "logo": "Sunsoor",
+    "downloadNow": "Download now",
+    "platformInfo": {
+        "heading": {
+            "prehighlight": "",
+            "highlight": "Sunsoor",
+            "posthighlight": "Job Portal & E-Learning Platform"
+        },
+        "buttons": {
+            "login": "Login",
+            "signup": "Sign up"
+        },
+        "qrCode": "Scan to download"
+    },
+    "getBlueCollarJobs": {
+        "title": {
+            "prehighlight": "Get ",
+            "highlight": "Blue ",
+            "posthighlight": "collar jobs"
+        },
+        "description": "Lorem ipsum dolor sit amet consectetur. Felis lectus a viverra in sit. Nunc diam in id gravida purus iaculis. Porta sed ac purus nulla ullamcorper sit. Vitae amet mauris duis vitae eu sed id turpis neque. Etiam ornare dui hac quis proin nunc lobortis sit nunc. Maecenas enim tortor id eget suspendisse ultrices est a."
+    },
+    "upgradeSkills": {
+        "title": {
+            "prehighlight": "Upgrade ",
+            "highlight": "your skills",
+            "posthighlight": ""
+        },
+        "description": "Lorem ipsum dolor sit amet consectetur. Felis lectus a viverra in sit. Nunc diam in id gravida purus iaculis. Porta sed ac purus nulla ullamcorper sit. Vitae amet mauris duis vitae eu sed id turpis neque. Etiam ornare dui hac quis proin nunc lobortis sit nunc. Maecenas enim tortor id eget suspendisse ultrices est a."
+    },
+    "Support": {
+        "title": "Support",
+        "customersupport": "Customer support"
+    },
+    "companyInfo": {
+        "name": "Sunsoor",
+        "description": "Lorem ipsum dolor sit amet consectetur. Felis lectus a viverra in sit. Nunc diam in id gravida purus iaculis."
+    },
+    "legal": {
+        "title": "Legal",
+        "privacyPolicy": "Privacy Policy",
+        "termsAndConditions": "Terms & condition",
+        "refundPolicy": "Refund Policy"
+    },
+    "privacyPolicy": {
+        "title": "Privacy Policy",
+        "content01": "Lorem ipsum dolor sit amet consectetur. Ac a tellus metus vulputate aliquam. Non mauris nunc aenean sed condimentum at vel dignissim. Ac fermentum aliquet hac amet. Tellus eu fames pretium tristique eget massa. Donec praesent in hac arcu tincidunt amet malesuada arcu. Semper tincidunt imperdiet condimentum aliquet elit. Metus elementum sagittis elementum praesent diam orci enim porta sed. Ornare quam massa ut amet aliquam eu lacus accumsan. Quam sed nulla adipiscing vel vulputate. Eget et odio ornare congue leo est eleifend vel. ... (and so on)",
+        "content02": "Lorem ipsum dolor sit amet consectetur. Ac a tellus metus vulputate aliquam. Non mauris nunc aenean sed condimentum at vel dignissim. Ac fermentum aliquet hac amet. Tellus eu fames pretium tristique eget massa. Donec praesent in hac arcu tincidunt amet malesuada arcu. Semper tincidunt imperdiet condimentum aliquet elit. Metus elementum sagittis elementum praesent diam orci enim porta sed. Ornare quam massa ut amet aliquam eu lacus accumsan. Quam sed nulla adipiscing vel vulputate. Eget et odio ornare congue leo est eleifend vel. ... (and so on)",
+        "content03": "Lorem ipsum dolor sit amet consectetur. Ac a tellus metus vulputate aliquam. Non mauris nunc aenean sed condimentum at vel dignissim. Ac fermentum aliquet hac amet. Tellus eu fames pretium tristique eget massa. Donec praesent in hac arcu tincidunt amet malesuada arcu. Semper tincidunt imperdiet condimentum aliquet elit. Metus elementum sagittis elementum praesent diam orci enim porta sed. Ornare quam massa ut amet aliquam eu lacus accumsan. Quam sed nulla adipiscing vel vulputate. Eget et odio ornare congue leo est eleifend vel. ... (and so on)"
+    },
+    "termsAndConditions": {
+        "title": "Terms and Conditions",
+        "content01": "Lorem ipsum dolor sit amet consectetur. Ac a tellus metus vulputate aliquam. Non mauris nunc aenean sed condimentum at vel dignissim. Ac fermentum aliquet hac amet. Tellus eu fames pretium tristique eget massa. Donec praesent in hac arcu tincidunt amet malesuada arcu. Semper tincidunt imperdiet condimentum aliquet elit. Metus elementum sagittis elementum praesent diam orci enim porta sed. Ornare quam massa ut amet aliquam eu lacus accumsan. Quam sed nulla adipiscing vel vulputate. Eget et odio ornare congue leo est eleifend vel. ... (and so on)",
+        "content02": "Lorem ipsum dolor sit amet consectetur. Ac a tellus metus vulputate aliquam. Non mauris nunc aenean sed condimentum at vel dignissim. Ac fermentum aliquet hac amet. Tellus eu fames pretium tristique eget massa. Donec praesent in hac arcu tincidunt amet malesuada arcu. Semper tincidunt imperdiet condimentum aliquet elit. Metus elementum sagittis elementum praesent diam orci enim porta sed. Ornare quam massa ut amet aliquam eu lacus accumsan. Quam sed nulla adipiscing vel vulputate. Eget et odio ornare congue leo est eleifend vel. ... (and so on)",
+        "content03": "Lorem ipsum dolor sit amet consectetur. Ac a tellus metus vulputate aliquam. Non mauris nunc aenean sed condimentum at vel dignissim. Ac fermentum aliquet hac amet. Tellus eu fames pretium tristique eget massa. Donec praesent in hac arcu tincidunt amet malesuada arcu. Semper tincidunt imperdiet condimentum aliquet elit. Metus elementum sagittis elementum praesent diam orci enim porta sed. Ornare quam massa ut amet aliquam eu lacus accumsan. Quam sed nulla adipiscing vel vulputate. Eget et odio ornare congue leo est eleifend vel. ... (and so on)"
+    }
+
+}

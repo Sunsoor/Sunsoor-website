@@ -1,11 +1,13 @@
 import React from "react";
 import "./Elements.css"
+import { useTranslation } from 'react-i18next';
 
 export const Logo = (props) => {
+    const {t} = useTranslation();
     return (
         <a className='logo-container' href={props.path}>
             <div className='logo'></div>
-            <div className="logo-heading">Sunsoor</div>
+            <div className="logo-heading">{t("logo")}</div>
         </a>
     );
 }
@@ -58,3 +60,21 @@ export const CustomLinks = (props) => {
         <a className='custom-links' href={props.path}>{props.content}</a>
     );
 }
+
+export const CustomDropdown = ({ options, selectedValue, onChange, className }) => {
+    return (
+      <div className={`dropdown-container ${className}`}>
+        <select
+          onChange={(e) => onChange(e.target.value)}
+          value={selectedValue}
+          className="custom-dropdown"
+        >
+          {options.map((option) => (
+            <option key={option.value} value={option.value}>
+              {option.label}
+            </option>
+          ))}
+        </select>
+      </div>
+    );
+  };

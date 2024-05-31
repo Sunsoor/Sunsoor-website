@@ -1,0 +1,43 @@
+.language-selector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown-toggle-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    object-fit: fill;
+    height: 3em;
+    width: 3em;
+}
+
+.globe-img {
+    object-fit: fill;
+    width: 3em;
+    height: 3em;
+}
+
+.language-dropdown {
+    position: absolute;
+    top: 12%;
+    right: 3%;
+    z-index: 1;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-container {
+    width: 7%;
+}
+
+.custom-dropdown {
+    width: 100%;
+}
