@@ -1,0 +1,19 @@
+.agreed-label {
+    font-size: 1.5em;
+}
+
+.error-label {
+    font-size: 1.5em;
+    color: red;
+}
+
+.agreed {
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.agreeSubmit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

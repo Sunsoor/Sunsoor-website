@@ -1,0 +1,96 @@
+.profile-heading {
+    margin: 40px;
+    color: #747374;
+    font-size: 1.25em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-main-heading {
+    margin: 0;
+    color: #3A3A3A;
+    font-size: 2rem;
+}
+
+.your-profile {
+    max-width: 860px;
+    margin: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.your-profile-img {
+    display: block;
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin: 0 auto;
+}
+
+.your-profile-name {
+    text-align: center;
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+.your-profile-section {
+    margin: 20px 0;
+    color: #747374;
+}
+
+.your-profile-section h3 {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #3A3A3A;
+}
+
+.teaching-details {
+    display: flex;
+    width: 100%;
+    gap: 10em;
+}
+
+.teaching-details h4 {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.courses-container {
+    width: 100%;
+}
+
+.courses {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.profile-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.edit-button,
+.upload-button {
+    width: 200px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.edit-button {
+    background-color: white;
+    border: 1px solid #007bff;
+    color: #007bff;
+}
+
+.upload-button {
+    background-color: #007bff;
+    color: white;
+}

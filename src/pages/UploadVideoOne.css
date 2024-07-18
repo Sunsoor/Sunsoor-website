@@ -1,0 +1,56 @@
+/* General styles for the form container */
+
+.video-details-main {
+    width: 27%;
+}
+
+.video-form-para {
+    color: #747374;
+    margin: -20px 0 20px 0;
+}
+
+.video-details-form {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    padding: 30px 0;
+}
+
+.video-input-field {
+    width: 100%;
+}
+
+.video-details-div {
+    margin-bottom: 10px;
+}
+
+
+/* General styles for the form container */
+
+.video-details-main {
+    width: 27%;
+}
+
+.video-form-para {
+    color: #747374;
+    margin: -20px 0 20px 0;
+}
+
+.video-details-form {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    padding: 30px 0;
+}
+
+.video-input-field {
+    width: 100%;
+}
+
+.video-details-div {
+    margin-bottom: 10px;
+}

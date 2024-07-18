@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import i18n from 'i18next';
-import { CustomDropdown } from './subcomponents/Elements';
+import { LangDropdown } from './subcomponents/Elements';
 import dropdownIcon from '../assets/globe.png'; // Ensure this path is correct
 import './LanguageSector.css';
 
@@ -31,7 +31,7 @@ const LanguageSelector = () => {
         <img src={dropdownIcon} alt="Dropdown" className='globe-img'/>
       </button>
       {isDropdownVisible && (
-        <CustomDropdown
+        <LangDropdown
           options={options}
           selectedValue={i18n.language}
           onChange={changeLanguage}

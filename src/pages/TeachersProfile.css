@@ -1,0 +1,27 @@
+/* General styles for the form container */
+
+.teacher-details-main {
+    width: 27%;
+}
+
+.teacher-form-para {
+    color: #747374;
+    margin: -20px 0 20px 0;
+}
+
+.teacher-details-form {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    padding: 30px 0;
+}
+
+.teacher-input-field {
+    width: 100%;
+}
+
+.teacher-details-div {
+    margin-bottom: 10px;
+}

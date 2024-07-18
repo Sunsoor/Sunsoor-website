@@ -1,0 +1,71 @@
+.inside-nav-bar {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navBar-containe {
+    margin: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-icons {
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon {
+    cursor: pointer;
+}
+
+.icon:hover {
+    color: #268AFF;
+}
+
+.download-container {
+    position: relative;
+    display: block;
+    margin: 0 20px;
+}
+
+.manu-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.manu-img {
+    width: 30px;
+    height: 30px;
+}
+
+.dropdown {
+    position: absolute;
+    margin: 0px -130px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown ul {
+    list-style-type: none;
+    margin: 10px;
+    padding: 0;
+}
+
+.dropdown ul li {
+    border-radius: 5px;
+}

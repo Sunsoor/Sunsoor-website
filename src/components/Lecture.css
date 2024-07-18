@@ -1,0 +1,23 @@
+/* Styling for the lecture component */
+
+.lecture-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.lecture-title {
+    font-size: 20px;
+    color: #333;
+    margin: 0;
+}
+
+.play-button {
+    background-color: transparent;
+    color: #007bff;
+    border: none;
+    padding: 20px;
+    font-size: 30px;
+    cursor: pointer;
+}

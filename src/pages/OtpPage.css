@@ -1,0 +1,62 @@
+/* src/OtpPage.css */
+
+.otp-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+}
+
+.otp-image {
+    width: 80%;
+    height: auto;
+    margin: 30px;
+}
+
+.subpara {
+    margin: -15px 0 60px 0px;
+    color: #666;
+}
+
+.otp-inputs {
+    display: flex;
+    justify-content: space-between;
+}
+
+.otp-field {
+    width: 30px;
+    height: 40px;
+    margin: 7px;
+    text-align: center;
+    font-size: 18px;
+    border: none;
+    border-bottom: 2px solid #000;
+    background: transparent;
+}
+
+.errorOTP {
+    width: 30px;
+    height: 40px;
+    margin: 7px;
+    color: red;
+    text-align: center;
+    font-size: 18px;
+    border: none;
+    border-bottom: 2px solid red;
+    background: transparent;
+}
+
+.resend-text {
+    margin: -25px 0 90px 0;
+    color: #666;
+}
+
+.resend-text-link {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.resend-text a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,130 @@
+.job-details-container {
+    padding: 50px;
+    max-width: 650px;
+}
+
+.job-details-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.job-details-header h1 {
+    font-size: 1.5rem;
+    color: #3A3A3A;
+}
+
+.job-details-header h2 {
+    font-size: 1.25rem;
+    color: #007bff;
+}
+
+.company-details {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid #3A3A3A;
+    border-radius: 10px;
+}
+
+.company-info {
+    padding: 20px;
+}
+
+.company-name {
+    display: flex;
+    align-items: center;
+}
+
+.company-logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+}
+
+.company-name h3 {
+    font-size: 1.25rem;
+    color: #333;
+    margin: 0;
+}
+
+.company-name h4 {
+    margin: 0;
+    color: #747374;
+}
+
+.company-details p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.company-details-button {
+    display: block;
+    width: 100%;
+    padding: 10px 25px;
+    font-size: 1rem;
+    text-align: start;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 0 0 10px 10px;
+    cursor: pointer;
+}
+
+.job-info {
+    display: flex;
+    gap: 15rem;
+    padding: 20px 0;
+}
+
+.job-info p {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #747374;
+}
+
+.job-info-label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: lighter;
+    color: #747374;
+    margin-bottom: 5px;
+}
+
+.skills {
+    padding: 20px 0;
+}
+
+.skills h4,
+.job-discription h4,
+.contact {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill {
+    background-color: #e9ecef;
+    color: #333;
+    padding: 5px 10px;
+    font-size: 0.875rem;
+}
+
+.job-discription h4 {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.edit-button {
+    display: flex;
+    justify-content: center;
+}

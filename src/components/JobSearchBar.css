@@ -1,0 +1,115 @@
+.location-search-bar {
+    display: flex;
+    align-items: center;
+    margin: 1em;
+    background: white;
+    border: 2px solid #268aff;
+    border-radius: 5px;
+    box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.2);
+}
+
+.skill-input {
+    flex: 1;
+    font-size: 1.2em;
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.divider {
+    width: 2px;
+    height: 30px;
+    /* Adjust height as needed */
+    background-color: #ccc;
+    /* Color of the divider */
+    margin: 0 10px;
+    /* Space around the divider */
+}
+
+.location-dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.location-dropdown-button {
+    background-color: white;
+    font-size: 1.2em;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: 450px;
+    /* Adjust width as needed */
+}
+
+.location-dropdown-button span {
+    margin-left: 5px;
+}
+
+.dropdown-options {
+    display: flex;
+}
+
+.location-dropdown-state {
+    position: absolute;
+    top: 40px;
+    left: 200px;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    width: 200px;
+    /* Adjust width as needed */
+}
+
+.location-dropdown-city {
+    position: absolute;
+    top: 40px;
+    left: 400px;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    width: 200px;
+    /* Adjust width as needed */
+}
+
+.state-button,
+.city-button {
+    background-color: white;
+    color: black;
+    font-size: 1.2em;
+    border: none;
+    padding: 10px;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+}
+
+.state-button.active,
+.city-button.active {
+    background-color: #e7f1ff;
+}
+
+.search-button {
+    background-color: #268aff;
+    border: none;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.search-button svg {
+    color: white;
+    font-size: 1.2em;
+}
+
+.city-dropdown-content {
+    top: 100%;
+    left: 0;
+}

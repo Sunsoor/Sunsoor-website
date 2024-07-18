@@ -1,0 +1,10 @@
+.subscription-page {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.subscription-para {
+    color: #747374;
+    margin: -20px 0 20px 0;
+}

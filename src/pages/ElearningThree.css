@@ -1,0 +1,80 @@
+.profile-container {
+    width: 850px;
+    margin: 50px;
+}
+
+.profile-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.profile-title,
+.profile-description h3,
+.profile-lectures h3 {
+    margin: 20px 0;
+    color: #3A3A3A;
+}
+
+.profile-views {
+    width: 50px;
+    font-size: 14px;
+    padding: 2px;
+    border-radius: 5px;
+    color: #555;
+    background-color: #E0EEFF;
+}
+
+.profile-creator,
+.profile-language,
+.profile-description {
+    margin: 15px 0;
+    color: #747374;
+}
+
+.profile-language span {
+    color: #007bff;
+}
+
+.profile-creator a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.profile-description {
+    margin: 35px 0;
+}
+
+.profile-lectures {
+    margin-top: 20px;
+}
+
+.profile-lectures ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.profile-lectures li {
+    margin: 5px 0;
+}
+
+.edit-button,
+.upload-button {
+    width: 200px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.edit-button {
+    background-color: white;
+    border: 1px solid #007bff;
+    color: #007bff;
+}
+
+.upload-button {
+    background-color: #007bff;
+    color: white;
+}

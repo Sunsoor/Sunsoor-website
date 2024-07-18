@@ -23,13 +23,13 @@ const HeroSection = () => {
                 <div className="hero-buttons">
                     <CustomButton
                         content={t("platformInfo.buttons.login")}
-                        path="/"
+                        path="/Login_T&C"
                         backgroundColor="#ffffff"
                         textColor="#268AFF"
                     />
                     <CustomButton
                         content={t("platformInfo.buttons.signup")}
-                        path="/"
+                        path="/sign-in"
 
                     />
                 </div>
