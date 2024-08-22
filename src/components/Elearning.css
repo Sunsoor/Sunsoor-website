@@ -1,0 +1,12 @@
+.Elearning-main {
+    width: 855px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.courses {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}

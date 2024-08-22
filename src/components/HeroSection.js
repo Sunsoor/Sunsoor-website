@@ -23,7 +23,7 @@ const HeroSection = () => {
                 <div className="hero-buttons">
                     <CustomButton
                         content={t("platformInfo.buttons.login")}
-                        path="/Login_T&C"
+                        path="/sign-in"
                         backgroundColor="#ffffff"
                         textColor="#268AFF"
                     />

@@ -1,0 +1,22 @@
+.unlock-lecture-main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.unlock-lecture-heading {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 35px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.unlock-lecture-heading h2 {
+    margin: 30px 0 0 0;
+}
+
+.unlock-lecture-heading span {
+    color: #007bff;
+}

@@ -1,4 +1,4 @@
-import React , { useRef,useState }from "react";
+import React, { useRef, useState } from "react";
 import "./Elements.css"
 import { useTranslation } from 'react-i18next';
 import PhoneInput from "react-phone-input-2";
@@ -39,7 +39,7 @@ export const CustomButton = (props) => {
     );
 }
 
-export const SubmitButton = ({ backgroundColor, textColor, content, handler,type }) => {
+export const SubmitButton = ({ backgroundColor, textColor, content, handler, type }) => {
     const buttonStyle = {
         backgroundColor,
         color: textColor,
@@ -137,22 +137,22 @@ export const CustomDropdown = ({ label, options, value, onChange }) => {
     );
 };
 
-export const CustomRange = ({ label,from, to, onChangeFrom ,onChangeTo }) => {
+export const CustomRange = ({ label, from, to, onChangeFrom, onChangeTo }) => {
     return (
         <div className="range-main-container">
             <label className="customInputLabel">{label}</label>
             <div className="range-container">
-            <label>From</label> 
-            <input className="range-from-to" type="number" name="from" value={from} onChange={onChangeFrom} />
-            <label>To</label>
-            <input className="range-from-to" type="number" name="to" value={to} onChange={onChangeTo} />
+                <label>From</label>
+                <input className="range-from-to" type="number" name="from" value={from} onChange={onChangeFrom} />
+                <label>To</label>
+                <input className="range-from-to" type="number" name="to" value={to} onChange={onChangeTo} />
             </div>
-            
+
         </div>
     );
 };
 
-export const InputField = ({ validInputCode, changeHandler, inputHeading, name, value, Type, placeholder }) => {
+export const InputField = ({ validInputCode = true, changeHandler, inputHeading, name, value, Type, placeholder }) => {
     return (
         <div className="inputFiled">
             <label className={validInputCode ? 'valid' : 'invalid'} >{inputHeading} </label>
@@ -257,34 +257,37 @@ export const CustomFileUploader = ({ label, accept, onChange, placeholder }) => 
 
 export const PhoneNumberValidation = ({ setFormData, validPhoneNumber, setvalidPhoneNumber }) => {
 
-    const verifyvalidPhoneNumber = (value) => {
+    const verifyvalidPhoneNumber = (value, country) => {
         try {
-            const PN = '+' + value
-            return isValidNumber(PN);
+            const fullPhoneNumber = '+' + country + value;
+            return isValidNumber(fullPhoneNumber);
         } catch (error) {
             return false;
         }
-    }
-    const handleChange = (value) => {
-        setFormData(prevData => ({
-            ...prevData,
-            PhoneNumber: value
-        }));
-        setvalidPhoneNumber(verifyvalidPhoneNumber(value));
     };
 
+    const handleChange = (value, country) => {
+        // Strip out the country code from the phone number
+        const phoneNumberWithoutCode = value.slice(country.dialCode.length);
+        setFormData(prevData => ({
+            ...prevData,
+            PhoneNumber: phoneNumberWithoutCode
+        }));
+
+        setvalidPhoneNumber(verifyvalidPhoneNumber(phoneNumberWithoutCode, country.dialCode));
+    };
 
     return (
         <div>
             <label>
                 <p className={validPhoneNumber ? 'valid' : 'invalid'}>Phone Number</p>
-                <div className={validPhoneNumber ? 'ValidPhoneNumberBox' : 'InvalidPhoneNumberBox'} >
+                <div className={validPhoneNumber ? 'ValidPhoneNumberBox' : 'InvalidPhoneNumberBox'}>
                     <PhoneInput
                         country={'in'}
                         onChange={handleChange}
                         placeholder="000 000 000"
                         inputProps={{
-                            required: true
+                            required: true,
                         }}
                     />
                 </div>
@@ -292,28 +295,44 @@ export const PhoneNumberValidation = ({ setFormData, validPhoneNumber, setvalidP
             {!validPhoneNumber && (
                 <div className="InvalidTextBox">
                     <AiOutlineExclamationCircle className="TextInvlid" />
-                    <p className="TextInvlid" >Invalid number</p>
+                    <p className="TextInvlid">Invalid number</p>
                 </div>
             )}
         </div>
-    )
-}
+    );
+};
 
-export const CustomPopup = ({amount, message, acceptButtonContent, rejectButtonContent, onAccept, onReject  }) => {
+export const CustomPopup = ({ amount, message, acceptButtonContent, rejectButtonContent, onAccept, onReject }) => {
     return (
         <div className="popup-overlay">
-      <div className="popup-content">
-      {amount && (
+            <div className="popup-content">
+                {amount && (
                     <h2 className="popup-amount">
                         {amount}<p>Rs.</p>
                     </h2>
                 )}
-        <p className="popup-massage">{message}</p>
-        <div className="popup-buttons">
-          <button onClick={onReject} className="reject-button">{rejectButtonContent}</button>
-          <button onClick={onAccept} className="accept-button">{acceptButtonContent}</button>
+                <p className="popup-massage">{message}</p>
+                <div className="popup-buttons">
+                    <button onClick={onReject} className="reject-button">{rejectButtonContent}</button>
+                    <button onClick={onAccept} className="accept-button">{acceptButtonContent}</button>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
     );
 };
+
+
+export const UnlockedLecture = ({ lecture, handleLectureSelection, selectedLectures }) => {
+    return (<div className="lecture-box" key={lecture.id}>
+        <label className="round-checkbox">
+            {lecture.title}
+            <input
+                type="checkbox"
+                value={lecture.id}
+                onChange={() => handleLectureSelection(lecture.id)}
+                checked={selectedLectures.includes(lecture.id)}
+            />
+
+        </label>
+    </div>)
+}

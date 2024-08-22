@@ -3,19 +3,15 @@ import { useNavigate } from 'react-router-dom';
 import './SignIn.css';
 import { FcGoogle } from 'react-icons/fc';
 import { InputField, PhoneNumberValidation, SubHeading, SubmitButton } from '../components/subcomponents/Elements';
+import axiosInstance from '../services/axiosConfig';
 
-export const SignIn = () => {
+export const SignIn = ({setIsLoggedIn}) => {
     const navigate = useNavigate();
-    const [validreferralCode, setValidreferralCode] = useState(true);
     const [validPhoneNumber, setvalidPhoneNumber] = useState(true);
     const [formData, setFormData] = useState({
         PhoneNumber: '',
         ReferralCode: ''
     });
-    const isValidSixDigitNumber = (referralCode) => {
-        const sixDigitRegex = /^\d{6}$/;
-        return sixDigitRegex.test(referralCode);
-    };
 
     function changeHandler(event) {
         const { name, value } = event.target;
@@ -23,43 +19,53 @@ export const SignIn = () => {
             ...prevData,
             [name]: value
         }));
-        if (name === 'ReferralCode') {
-            setValidreferralCode(isValidSixDigitNumber(value));
-        }
+        
     }
-    function submitHandler(event) {
+
+    async function submitHandler(event) {
         event.preventDefault();
-        if (validreferralCode && validPhoneNumber) {
-            navigate('/basic-info');
-            const accountData = { ...formData };
-            console.log('login data: ', accountData);
+        if (validPhoneNumber) {
+            try {
+                console.log("phone number sending to server: ", formData.PhoneNumber);
+                const response = await axiosInstance.post('/m1/api/client/auth/requestOtp', {
+                    phoneNo: formData.PhoneNumber,
+                });
+                if (response.data.status === 'success') {
+                    console.log('OTP sent successfully:', response.data);
+                    setIsLoggedIn(true);
+                    navigate('/otp-page', {
+                        state: { phoneNumber: formData.PhoneNumber, referralCode: formData.ReferralCode }
+                    });
+                } else {
+                    console.log('Failed to send OTP:', response.data.message);
+                }
+            } catch (error) {
+                console.error('Error sending OTP:', error);
+            }
         } else {
-            console.log('Invalid referral code');
+            console.log('Invalid phone number');
         }
     }
+    
 
     return (
         <form onSubmit={submitHandler} className='form-container'>
-
-            <SubHeading
-                heading="Sign-in/Sign-up"
-            />
-            <p className='head-para' >You will log in after verification if you are not registered</p>
+            <SubHeading heading="Sign-in/Sign-up" />
+            <p className='head-para'>You will log in after verification if you are not registered</p>
 
             <PhoneNumberValidation
                 setFormData={setFormData}
                 validPhoneNumber={validPhoneNumber}
                 setvalidPhoneNumber={setvalidPhoneNumber}
             />
-             <InputField 
-                validInputCode={validreferralCode}
+            <InputField
                 value={formData.ReferralCode}
                 changeHandler={changeHandler}
                 inputHeading="Referral code"
-                name = "ReferralCode"
+                name="ReferralCode"
             />
-            <div >
-                <SubmitButton content="Sent Code" handler={submitHandler} />
+            <div>
+                <SubmitButton content="Send Code" handler={submitHandler} />
             </div>
             <button className='template-button'>
                 <FcGoogle className='Gicon' />

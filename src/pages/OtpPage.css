@@ -55,6 +55,7 @@
 .resend-text-link {
     color: #007bff;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .resend-text a:hover {

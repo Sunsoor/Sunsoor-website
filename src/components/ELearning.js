@@ -2,13 +2,19 @@
 import React from 'react';
 import CourseCard from '../components/CourseCard';
 import CourseSearchBar from './CourseSearchBar';
+import './Elearning.css'
 
 const ELearning = () => {
   return (
-    <div style={{ display: 'flex', alignItems: 'center', flexDirection:'column' }} >
+    <div className='Elearning-main' >
       
       <CourseSearchBar/>
-      <CourseCard/>
+      <div className='courses'>
+        <CourseCard/>
+        <CourseCard/>
+        <CourseCard/>
+        <CourseCard/>
+        </div>
     </div>
   );
 };

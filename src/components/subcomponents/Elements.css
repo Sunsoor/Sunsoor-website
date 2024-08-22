@@ -418,6 +418,47 @@
 }
 
 
+/* Unlock lecture*/
+
+.lecture-box {
+    border: 1px solid #989898;
+    border-radius: 3px;
+    margin: 10px 0;
+    padding: 10px;
+    overflow-wrap: normal;
+}
+
+.round-checkbox input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 25px;
+    height: 25px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.round-checkbox input[type="checkbox"]:checked::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: #007bff;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+}
+
+.round-checkbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
 /* Large Screens 
 @media only screen and (min-width: 1200px) {}
 

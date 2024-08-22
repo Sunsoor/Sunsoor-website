@@ -21,3 +21,12 @@
     font-size: 30px;
     cursor: pointer;
 }
+
+.lock-button {
+    background-color: transparent;
+    color: #000000;
+    border: none;
+    padding: 20px;
+    font-size: 30px;
+    cursor: pointer;
+}

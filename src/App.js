@@ -30,43 +30,45 @@ import UploadVideo from './pages/UploadVideo';
 import UploadVideoOne from './pages/UploadVideoOne';
 import YourProfileTwo from './pages/YourProfileTwo';
 import ElearningThree from './pages/ElearningThree';
+import UnlockCourse from './pages/UnlockCourses';
 
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-      
+
   return (
     <div className="App">
-      
+
 
       {isLoggedIn ? <InsideNavBar /> : <Navbar />}
       <Routes>
-      {isLoggedIn ? <Route path="/" element={<Home />} /> : <Route path="/" element={<LandingPage />} />}
-        
+        {isLoggedIn ? <Route path="/" element={<Home />} /> : <Route path="/" element={<LandingPage />} />}
+
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
         <Route path="/privacy-policy" element={<PrivacyPage />} />
         <Route path="/download-now" element={<DownloadNow />} />
-        <Route path="/sign-in" element={<SignIn />} />
-        <Route path="/basic-info" element={<BasicInfo />} />
+        <Route path="/sign-in" element={<SignIn setIsLoggedIn={setIsLoggedIn}/>} />
         <Route path="/otp-page" element={<OtpPage />} />
-        <Route path="/Login_T&C" element={<AppTermsAndConditions setIsLoggedIn={setIsLoggedIn}/>} />
+        <Route path="/basic-info" element={<BasicInfo />} />
+        <Route path="/Login_T&C" element={<AppTermsAndConditions setIsLoggedIn={setIsLoggedIn} />} />
         <Route path="/post" element={<Post />} />
         <Route path="/company-details" element={<CompanyDetails />} />
         <Route path="/job-details" element={<JobDetails />} />
         <Route path="/subscription-screen" element={<SubscriptionScreen />} />
         <Route path="/delivery-boy" element={<DeliveryBoy />} />
         <Route path="/company-Profile" element={<CompanyProfile />} />
-        <Route path="/teacher-Profile" element={<TeachersProfile/>} />
-        <Route path="/teacher-subscription" element={<TeachersSubscription/>} />
-        <Route path="/payment" element={<Payment/>} />
-        <Route path="/your-profile" element={<YourProfile/>} />
-        <Route path="/course-details" element={<CourseDetails/>} />
-        <Route path="/upload-video" element={<UploadVideo/>} />
-        <Route path="/upload-video-one" element={<UploadVideoOne/>} />
-        <Route path="/your-profile-two" element={<YourProfileTwo/>} />
-        <Route path="/element-three" element={<ElearningThree/>} />
+        <Route path="/teacher-Profile" element={<TeachersProfile />} />
+        <Route path="/teacher-subscription" element={<TeachersSubscription />} />
+        <Route path="/payment" element={<Payment />} />
+        <Route path="/your-profile" element={<YourProfile />} />
+        <Route path="/course-details" element={<CourseDetails />} />
+        <Route path="/upload-video" element={<UploadVideo />} />
+        <Route path="/upload-video-one" element={<UploadVideoOne />} />
+        <Route path="/your-profile-two" element={<YourProfileTwo />} />
+        <Route path="/element-three" element={<ElearningThree />} />
+        <Route path="/unlock-courses" element={<UnlockCourse />} />
       </Routes>
-      <Footer/>
+      <Footer />
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { InputField, PhoneNumberValidation, SubHeading, SubmitButton } from "../components/subcomponents/Elements";
+import axiosInstance from '../services/axiosConfig';
 import './BasicInfo.css';
 
 export const BasicInfo = () => {
@@ -19,7 +20,6 @@ export const BasicInfo = () => {
         return emailRegex.test(email);
     };
 
-
     const changeHandler = (event) => {
         const { name, value } = event.target;
         setFormData(prevData => ({
@@ -32,14 +32,52 @@ export const BasicInfo = () => {
         }
     };
 
-    const submitHandler = (event) => {
+    const submitHandler = async (event) => {
         event.preventDefault();
         if (validPhoneNumber && validEmail) {
-            navigate('/otp-page');
-            const accountData = { ...formData };
-            console.log('login data: ', accountData);
+            try {
+                const jwtToken = localStorage.getItem('jwt');
+                
+                // Send user details to the server
+                const response = await axiosInstance.post('/m1/update/updateUserByMobileNO', {
+                    fullName: formData.Name,
+                    email: formData.Email,
+                    mobileNo: formData.PhoneNumber,
+                    city: formData.City
+                }, {
+                    headers: {
+                        'Authorization': `Bearer ${jwtToken}`
+                    }
+                });
+
+                // Handle response
+                if (response.data.status === 'success') {
+                    console.log('User details updated successfully:', response.data);
+
+                    if (response.data.message.includes('OTP send to your email')) {
+                        alert('OTP sent to your email. Please verify.');
+                        // Redirect to OTP page with email verification flag
+                        navigate('/otp-page', {
+                            state: { 
+                                email: formData.Email, 
+                                isEmailVerification: true 
+                            }
+                        });
+                    } else {
+                        alert('User details updated successfully!');
+                        navigate('/home'); // Redirect to home page or wherever appropriate
+                    }
+                } else {
+                    console.error('Failed to update user details:', response.data.message);
+                    alert('Failed to update user details.');
+                }
+            } catch (error) {
+                console.error('Error updating user details:', error);
+                alert('Error updating user details.');
+            }
         } else {
             console.log('Invalid phone number or Email');
+            alert('Invalid phone number or Email');
         }
     };
 
@@ -77,8 +115,8 @@ export const BasicInfo = () => {
                 validInputCode={true}
                 changeHandler={changeHandler}
             />
-            <div >
-                <SubmitButton content="Sent Code" handler={submitHandler} />
+            <div>
+                <SubmitButton content="Send Code" handler={submitHandler} />
             </div>
         </form>
     );

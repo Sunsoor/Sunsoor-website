@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import ElearningThreeData from '../testing data/ElearningThreeData';
-
+import VideoPlayerData from '../testing data/VideoPlayerData';
 import './ElearningThree.css';
 import { CustomPopup } from '../components/subcomponents/Elements';
+import VideoPlayer from '../components/VideoPlayer';
 
 
 const ElearningThree = () => {
@@ -41,7 +42,12 @@ const ElearningThree = () => {
 
     return (
         <div className="profile-container">
-            <img src={lectureData.thumbnail} alt="Lecture Thumbnail" />
+         <VideoPlayer
+        videoUrl={VideoPlayerData.videoUrl}
+        thumbnail={VideoPlayerData.thumbnail}
+        
+      />
+           {/* <img src={lectureData.thumbnail} alt="Lecture Thumbnail" />*/}
             <h2 className="profile-title">{lectureData.title}</h2>
        
             <div className="profile-description">
