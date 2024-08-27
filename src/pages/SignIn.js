@@ -27,6 +27,7 @@ export const SignIn = ({setIsLoggedIn}) => {
         if (validPhoneNumber) {
             try {
                 console.log("phone number sending to server: ", formData.PhoneNumber);
+                localStorage.removeItem('jwtToken');
                 const response = await axiosInstance.post('/m1/api/client/auth/requestOtp', {
                     phoneNo: formData.PhoneNumber,
                 });

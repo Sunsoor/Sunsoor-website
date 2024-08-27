@@ -63,6 +63,7 @@ const OtpPage = () => {
 
             if (isEmailVerification) {
                 // Verify OTP for email
+                console.log("OTP :",enteredOtp)
                 response = await axiosInstance.post('/m1/update/verifyOtpForEmail', {
                     otp: enteredOtp,
                     email: email,

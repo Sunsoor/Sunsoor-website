@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const axiosInstance = axios.create({
-    baseURL: 'http://api.sunsoor.in:8999',
+    baseURL: 'http://sunsoor.in:8999',
     headers: {
         'Content-Type': 'application/json',
     },

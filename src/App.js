@@ -34,16 +34,12 @@ import UnlockCourse from './pages/UnlockCourses';
 
 
 const App = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
   return (
     <div className="App">
-
-
       {isLoggedIn ? <InsideNavBar /> : <Navbar />}
       <Routes>
         {isLoggedIn ? <Route path="/" element={<Home />} /> : <Route path="/" element={<LandingPage />} />}
-
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
         <Route path="/privacy-policy" element={<PrivacyPage />} />
         <Route path="/download-now" element={<DownloadNow />} />
